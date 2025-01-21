@@ -7,7 +7,12 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 dotenv.config();
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "https://school-task-rbzz.vercel.app"],
+    credentials: true,
+  })
+);
 app.use(cookieParser());
 app.use("/api", routes);
 
