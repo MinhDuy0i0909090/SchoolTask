@@ -30,7 +30,7 @@ export const fetchEvents = async () => {
   return data;
 };
 
-export const addEvent = async (newEvent) => {
+export const addEvents = async (newEvent) => {
   const { data } = await api.post("/events", newEvent);
   return data;
 };
