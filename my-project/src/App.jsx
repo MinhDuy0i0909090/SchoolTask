@@ -13,7 +13,6 @@ import LoginForm from "./pages/auth/login";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect } from "react";
 import { checkAuth } from "./services/user";
-import { Skeleton } from "antd";
 
 function App() {
   const navigate = useNavigate();
@@ -31,13 +30,11 @@ function App() {
     if (isError) {
       console.error("Error checking auth:", isError);
       navigate("/auth/login", { replace: true });
-   
       return;
     }
-  }, [ isError, navigate]);
+  }, [isError, navigate]);
   console.log(userAuth);
 
- 
   return (
     <Routes>
       <Route path="/" element={<Navigate to="/auth/login" replace />} />
