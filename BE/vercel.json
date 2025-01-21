@@ -1,14 +1,23 @@
 {
   "builds": [
     {
-      "src": "*.js",
+      "src": "FE/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "FE/dist" }
+    },
+    {
+      "src": "BE/*.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "/BE/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/FE/$1"
     }
   ]
 }
