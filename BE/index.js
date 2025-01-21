@@ -12,7 +12,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://school-task-rbzz.vercel.app",
-      "https://school-task-beta.vercel.app/api/auth/login",
+      "https://school-task-beta.vercel.app",
     ],
     credentials: true,
   })
