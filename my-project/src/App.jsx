@@ -26,13 +26,13 @@ function App() {
     queryFn: checkAuth,
   });
 
-  useEffect(() => {
-    if (isError) {
-      console.error("Error checking auth:", isError);
-      navigate("/auth/login", { replace: true });
-      return;
-    }
-  }, [isError, navigate]);
+  // useEffect(() => {
+  //   if (isError) {
+  //     console.error("Error checking auth:", isError);
+  //     navigate("/auth/login", { replace: true });
+  //     return;
+  //   }
+  // }, [isError, navigate]);
   console.log(userAuth);
 
   return (
