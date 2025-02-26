@@ -28,13 +28,8 @@ function Navbar() {
   return (
     <div className="flex items-center justify-end mx-3 mt-2 ">
       <div className="flex flex-row gap-6">
-        <Badge offset={[-1, 14]} count={2} size="small">
-          <MessageCircleMore
-            className="my-4"
-            size={21}
-            color="#1f2937"
-            strokeWidth={1}
-          />
+        <Badge offset={[-1, 14]} count={eventCount} size="small">
+          <Bell className="my-4" size={21} color="#1f2937" strokeWidth={1} />
         </Badge>
 
         <div className="flex justify-around gap-2">
