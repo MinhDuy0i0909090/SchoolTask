@@ -15,25 +15,8 @@ import { useEffect } from "react";
 import { checkAuth } from "./services/user";
 
 function App() {
-  const navigate = useNavigate();
 
-  const {
-    data: userAuth,
-    isLoading,
-    isError,
-  } = useQuery({
-    queryKey: ["user"],
-    queryFn: checkAuth,
-  });
 
-  // useEffect(() => {
-  //   if (isError) {
-  //     console.error("Error checking auth:", isError);
-  //     navigate("/auth/login", { replace: true });
-  //     return;
-  //   }
-  // }, [isError, navigate]);
-  console.log(userAuth);
 
   return (
     <Routes>

@@ -37,13 +37,9 @@ function Navbar() {
           />
         </Badge>
 
-        <Badge offset={[-1, 14]} count={eventCount} size="small">
-          <Bell className="my-4" size={21} color="#1f2937" strokeWidth={1} />
-        </Badge>
-
         <div className="flex justify-around gap-2">
           <div className="  font-['Proxima Nova']   ">
-            <span className="font-bold text-sm ">John Moe</span>
+            <span className="font-bold text-sm ">Min</span>
             <span className="flex text-xs font-extralight justify-end">
               Admin
             </span>
